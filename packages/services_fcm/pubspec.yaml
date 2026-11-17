@@ -1,0 +1,22 @@
+name: guardian_services_fcm
+description: Firebase Cloud Messaging implementation of PushService (+ Noop fallback).
+publish_to: none
+version: 0.1.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.3
+  flutter: ">=3.41.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  guardian_core: ^0.1.0
+  guardian_services: ^0.1.0
+  firebase_core: ^4.0.0
+  firebase_messaging: ^16.0.0
+  supabase_flutter: ^2.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

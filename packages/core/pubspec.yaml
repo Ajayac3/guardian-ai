@@ -1,0 +1,14 @@
+name: guardian_core
+description: Cross-cutting primitives — config, env, Result, logging, clock, session enums.
+publish_to: none
+version: 0.1.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.3
+
+dependencies:
+  meta: ^1.15.0
+
+dev_dependencies:
+  test: ^1.25.0

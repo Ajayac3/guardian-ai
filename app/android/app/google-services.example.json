@@ -1,0 +1,30 @@
+{
+  "_README": [
+    "TEMPLATE ONLY — Firebase Cloud Messaging (M7 push) is OFF until you replace this.",
+    "1. Create a Firebase project, add an Android app with applicationId 'com.guardianai.guardian_app'.",
+    "2. Download the real google-services.json into app/android/app/ (it is gitignored).",
+    "3. In app/android/settings.gradle.kts add: id(\"com.google.gms.google-services\") version \"4.4.2\" apply false",
+    "4. In app/android/app/build.gradle.kts plugins{} add: id(\"com.google.gms.google-services\")",
+    "Until then FcmPushService falls back to NoopPushService at runtime and the app still builds."
+  ],
+  "project_info": {
+    "project_number": "000000000000",
+    "project_id": "guardian-ai-example",
+    "storage_bucket": "guardian-ai-example.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:000000000000:android:0000000000000000000000",
+        "android_client_info": {
+          "package_name": "com.guardianai.guardian_app"
+        }
+      },
+      "api_key": [{ "current_key": "REPLACE_WITH_YOUR_FIREBASE_ANDROID_API_KEY" }],
+      "services": {
+        "appinvite_service": { "other_platform_oauth_client": [] }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

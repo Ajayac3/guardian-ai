@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- APNs. Xcode flips this to "production" for release/TestFlight builds. -->
+	<key>aps-environment</key>
+	<string>development</string>
+	<!-- Emergency push should arrive promptly even under Focus/DND. (Critical
+	     Alerts, which bypass the mute switch, need a separate Apple-approved
+	     entitlement: com.apple.developer.usernotifications.critical-alerts.) -->
+	<key>com.apple.developer.usernotifications.time-sensitive</key>
+	<true/>
+	<!-- Shared container so the App Intents + Control Center / lock-screen widget
+	     extensions can hand an activation to the main app. -->
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.com.guardianai.guardian</string>
+	</array>
+	<!-- Hardware-backed key storage (Secure Enclave / Keychain). -->
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)com.guardianai.guardianApp</string>
+	</array>
+</dict>
+</plist>

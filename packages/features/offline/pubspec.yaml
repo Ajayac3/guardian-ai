@@ -1,0 +1,22 @@
+name: guardian_offline
+description: Offline queue drain on reconnect, low-battery final ping, gated SMS.
+publish_to: none
+version: 0.1.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.3
+  flutter: ">=3.41.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  guardian_core: ^0.1.0
+  guardian_services: ^0.1.0
+  battery_plus: ^7.0.0
+  connectivity_plus: ^7.0.0
+  another_telephony: ^0.4.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

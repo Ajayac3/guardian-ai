@@ -1,0 +1,15 @@
+title = "Guardian AI gitleaks config"
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Local dev placeholders and the example env are not secrets."
+paths = [
+  '''\.env\.example''',
+  '''.*\.example\..*''',
+]
+regexes = [
+  '''devkey''',
+  '''__pending__''',
+  '''__local_[a-z_]+__''',
+]

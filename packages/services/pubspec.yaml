@@ -1,0 +1,15 @@
+name: guardian_services
+description: Pure-Dart service interfaces + models. The seam managed/self-host impls plug into.
+publish_to: none
+version: 0.1.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.3
+
+dependencies:
+  guardian_core: ^0.1.0
+  meta: ^1.15.0
+
+dev_dependencies:
+  test: ^1.25.0

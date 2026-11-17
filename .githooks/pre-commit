@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+echo "[pre-commit] gitleaks (staged)"
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks protect --staged --no-banner --redact
+fi
+echo "[pre-commit] dart format check (staged .dart)"
+staged=$(git diff --cached --name-only --diff-filter=ACM | grep '\.dart$' || true)
+if [ -n "$staged" ]; then
+  dart format --output none --set-exit-if-changed $staged
+fi

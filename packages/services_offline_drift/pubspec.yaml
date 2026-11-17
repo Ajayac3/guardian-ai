@@ -1,0 +1,23 @@
+name: guardian_services_offline_drift
+description: Encrypted durable OfflineQueue — crash-safe file store + app-layer AEAD.
+publish_to: none
+version: 0.1.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.3
+  flutter: ">=3.41.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  guardian_core: ^0.1.0
+  guardian_services: ^0.1.0
+  guardian_services_crypto: ^0.1.0
+  cryptography: ^2.7.0
+  path: ^1.9.0
+  path_provider: ^2.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

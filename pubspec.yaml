@@ -1,0 +1,48 @@
+name: guardian_workspace
+description: Guardian AI — privacy-first personal-safety app. Monorepo workspace root.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.11.3
+
+workspace:
+  - app
+  - packages/core
+  - packages/shared
+  - packages/services
+  - packages/services_livekit
+  - packages/services_supabase
+  - packages/services_r2
+  - packages/services_fcm
+  - packages/services_crypto
+  - packages/services_location_native
+  - packages/services_offline_drift
+  - packages/features/onboarding
+  - packages/features/contacts
+  - packages/features/trigger
+  - packages/features/streaming
+  - packages/features/session
+  - packages/features/location
+  - packages/features/evidence
+  - packages/features/offline
+  - packages/features/settings
+
+dev_dependencies:
+  melos: ^7.0.0
+  flutter_lints: ^6.0.0
+
+melos:
+  scripts:
+    analyze:
+      description: Static analysis across the whole workspace.
+      run: dart analyze .
+    format:
+      description: Format all Dart code.
+      run: dart format .
+    format-check:
+      description: Fail if any Dart code is unformatted.
+      run: dart format --output none --set-exit-if-changed .
+    test:
+      description: Run tests in every package that has a test/ directory.
+      run: melos exec --dir-exists="test" --order-dependents -- flutter test

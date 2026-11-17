@@ -1,0 +1,81 @@
+:root {
+  --red: #d32f2f;
+  --green: #2e7d32;
+  --amber: #f9a825;
+  --bg: #0e0f13;
+  --fg: #f5f5f5;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #app {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.state-bar {
+  padding: 12px 16px;
+  font-weight: 700;
+  text-align: center;
+  background: var(--amber);
+  color: #000;
+}
+.state-bar.active { background: var(--red); color: #fff; }
+.state-bar.lost_connection { background: var(--amber); color: #000; }
+.state-bar.ended, .state-bar.cancelled { background: #444; color: #fff; }
+
+.conn-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #444;
+}
+.conn-badge.connected { background: var(--green); }
+.conn-badge.reconnecting { background: var(--amber); color: #000; }
+.conn-badge.disconnected { background: var(--red); }
+
+.stage {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+}
+@media (min-width: 800px) {
+  .stage { grid-template-rows: none; grid-template-columns: 1fr 1fr; }
+}
+
+.video-pane { background: #000; }
+.video-pane video { width: 100%; height: 100%; object-fit: contain; }
+.map-pane { position: relative; }
+.map-pane .maplibregl-map { position: absolute; inset: 0; }
+
+.footer {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  background: #16181d;
+}
+.stop-btn {
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--red);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.stop-btn:disabled { opacity: 0.5; cursor: default; }

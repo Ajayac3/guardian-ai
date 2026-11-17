@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+echo "[pre-push] gitleaks full scan"
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks detect --no-banner --redact
+fi
+echo "[pre-push] analyze"
+dart analyze . || { echo "analyze failed"; exit 1; }

@@ -1,0 +1,18 @@
+name: guardian_shared
+description: Shared UI — theme and the visible recording indicator.
+publish_to: none
+version: 0.1.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.3
+  flutter: ">=3.41.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  guardian_core: ^0.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

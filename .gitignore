@@ -1,0 +1,38 @@
+# Dart/Flutter
+.dart_tool/
+.packages
+build/
+**/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+*.iml
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+**/google-services.json
+!**/google-services.example.json
+**/GoogleService-Info.plist
+*.p8
+*.keystore
+*.jks
+key.properties
+
+# Node / viewer
+node_modules/
+viewer/dist/
+viewer/.vite/
+
+# Supabase local
+supabase/.branches/
+supabase/.temp/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Keep the spec
+!Guardian AI — Build Specification v2.pdf
